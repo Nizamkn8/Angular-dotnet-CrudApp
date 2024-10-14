@@ -1,0 +1,27 @@
+
+<div class="container">
+  <h1>All students details</h1>
+  <table class="table">
+    <thead>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Mark</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of Getdata">
+        <td>{{ p.Name }}</td>
+        <td>{{ p.Age }}</td>
+        <td>{{ p.mark }}</td>
+        <td>
+          <button class="delete btn btn-danger" title="delete student" (click)="delete(p.Id)">Delete</button>
+        </td>
+        <td>
+          <button class="btn btn-primary" routerLink="/details/{{p.Id}}">Details</button>
+        </td>
+        <td>
+          <button class="btn btn-success" routerLink="/edit/{{p.Id}}">Edit</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

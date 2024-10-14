@@ -1,0 +1,20 @@
+<p>insert-tab works!</p>
+<div>
+  <div>
+    <label for="">
+      Name
+      <input type="text" [(ngModel)]="userData.Name" placeholder="Name" id="uname" name="uname" required="" #uname="ngModel" />
+      <span *ngIf="uname.invalid">*</span>
+    </label>
+    <br>
+    <label>
+      Age:
+      <input type="number" [(ngModel)]="userData.Age" placeholder="Age" [min]="18" [max]="80" />
+    </label><br>
+    <label>
+      Mark:
+      <input type="number" [(ngModel)]="userData.mark" placeholder="Mark" />
+    </label><br>
+  </div>
+  <button (click)="adduserdata()">Save</button>
+</div>

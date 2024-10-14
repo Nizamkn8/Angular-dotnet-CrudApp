@@ -1,0 +1,20 @@
+<p>Update Data</p>
+<div>
+  <div>
+    <label for="">
+      Name
+      <input type="text" [(ngModel)]="productData.Name" placeholder="Name" />
+    </label>
+    <br>
+    <label>
+      Age:
+      <input [(ngModel)]="productData.Age" placeholder="Age" />
+    </label><br>
+    <label>
+      Mark:
+      <input [(ngModel)]="productData.mark" placeholder="Mark" />
+    </label><br>
+  </div>
+  <button class="btn btn-success mt-3 mr-2" (click)="updateProduct()">Update</button>
+  <button class="btn btn-primary mt-3"  routerLink="/stdetails/">Goto Home</button>
+</div>
